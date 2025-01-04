@@ -122,3 +122,12 @@ class Linked_list:
             print(node.get_value(), end = " ")
             return list_traversal(node.next)
         list_traversal(root)
+    
+    """метод получения массива из элементов списка"""
+    def get_items_array(self) -> list:
+        root = self.root
+        items = []
+        while root is not None:
+            items.append(root.get_value())
+            root = root.next
+        return items
