@@ -1,7 +1,6 @@
 """Двусвязный список на python3"""
 from typing import Any
 from dataclasses import dataclass
-from random import randint
 
 """Класс узла двусвязного списка"""
 @dataclass
