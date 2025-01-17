@@ -2,8 +2,8 @@ from typing import Any
 
 class Stack:
     def __init__(self) -> None:
-        self.items = []
-        self.size = 0
+        self.items : list = []
+        self.size : int = 0
 
     """метод добавления элемента в стек"""
     def push(self, val : Any) -> None:
