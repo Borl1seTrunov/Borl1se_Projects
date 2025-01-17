@@ -2,7 +2,7 @@
 
 ## check list
 
-### 1)  Linked list - Done
+### -1)  Linked list - Done
 ### 2)  Double linked list - Done
 ### 3)  Stack
 ### 4)  Deque
