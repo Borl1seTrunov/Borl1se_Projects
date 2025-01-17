@@ -102,8 +102,6 @@ class Linked_list:
 
     """метод получения элемента по индексу"""
     def get_item_by_idx(self, idx : int) -> Node | None:
-        if self.size == 0:
-            return
         if idx >= self.size:
             return
         root = self.root
