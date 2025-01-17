@@ -78,3 +78,17 @@ def test_pop_by_idx_item() -> None:
         items_list.pop(idx)
     assert llist.get_items_array() == items_list
     assert llist.get_size() == 5*10**3
+
+"""тест получения элемента по индексу"""
+def test_get_item_by_idx() -> None:
+    llist = Linked_list()
+    items_list = []
+    for _ in range(10**4):
+        item = randint(0, 10**4)
+        llist.push_back(item)
+        items_list.append(item)
+    for _ in range(10**3):
+        random_idx = randint(0,10**4)
+        item_in_llist = llist.get_item_by_idx(random_idx).get_value()
+        item_in_items_list = items_list[random_idx]
+        assert item_in_llist == item_in_items_list

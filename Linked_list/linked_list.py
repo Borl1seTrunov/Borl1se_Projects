@@ -100,6 +100,17 @@ class Linked_list:
         root.next = root.next.next
         self.size -= 1
 
+    """метод получения элемента по индексу"""
+    def get_item_by_idx(self, idx : int) -> Node | None:
+        if self.size == 0:
+            return
+        if idx >= self.size:
+            return
+        root = self.root
+        for _ in range(idx):
+            root = root.next
+        return root
+
     """метод поиска элемента в списке"""
     def find(self, item : Any) -> Any:
         root = self.root
