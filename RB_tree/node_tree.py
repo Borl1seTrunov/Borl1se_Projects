@@ -10,9 +10,13 @@ class Node_tree:
         self.height: int = 1
         self.color: bool = True
 
+    """метод получения значения узла"""
+    def get_value(self) -> Any:
+        return self.value
+
     """метод получения высоты узла"""
     @staticmethod
-    def get_height(node_tree: Node_tree | None) -> int:
+    def get_height(node_tree : Node_tree | None) -> int:
         return node_tree.height if Node_tree is not None else 0
 
     """метод возвращающий черный лист"""

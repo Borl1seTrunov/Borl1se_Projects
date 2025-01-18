@@ -1,12 +1,25 @@
 from __future__ import annotations
 from typing import Any
-from .node_tree import Node_tree
+from node_tree import Node_tree
 import pygraphviz
 
 class Red_black_tree:
     def __init__(self) -> None:
-        self.nill = Node_tree(None).get_nill()
-        self.root = self.nill
+        self.nill : Node_tree = Node_tree(None).get_nill()
+        self.root : Node_tree = self.nill
+
+    """метод поиска элемента в дереве"""
+    def find_item(self, val : Any) -> Any | None:
+        def get_item_by_node(val : Any, current_node : Node_tree) -> Any | None:
+            if current_node is None:
+                return
+            node_value : Any = current_node.get_value()
+            if node_value == val:
+                return val
+            if node_value > val:
+                return get_item_by_node(val, current_node.left)
+            return get_item_by_node(val, current_node.right)
+        return get_item_by_node(val, self.root)
 
     """метод получения отсортированных элементов дерева"""
     def get_sorted_items(self) -> list:
