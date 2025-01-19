@@ -10,7 +10,7 @@
 - 6)  Max heap
 - 7)  Min heap
 - 8)  Universal heap(max/min heap with flag)
-- 9)  AVL tree
+- 9)  AVL tree - Done - TESTS_DONE
 - 10) RB tree - Done - TESTS_DONE
 - 11) Hash table (chain method)
 - 12) Hash table (Open adressation)
